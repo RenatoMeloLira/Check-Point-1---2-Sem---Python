@@ -3,13 +3,11 @@ import hashlib
 file_0 = input("Escolha o arquivo original de backup: ")
 file_1 = input("Escolha o arquivo para a comparação: ")
 
-hash_0 = hashlib.new('sha256')
-hash_0.update(open(file_0, 'rb').read())
+var1 = (open(file_0, 'r').read())
 
-hash_1 = hashlib.new('sha256')
-hash_1.update(open(file_1, 'rb').read())
+var2 = (open(file_1, 'r').read())
 
-if hash_0.digest() != hash_1.digest():
+if var1 != var2:
     pergunta = input("O arquivo não esta integro, voce deseja restaurar a configuração original? ").upper()
     if pergunta == "SIM":
         arquivo = open(file_0, 'r') # Abra o arquivo (leitura)
