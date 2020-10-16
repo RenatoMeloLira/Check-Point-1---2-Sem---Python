@@ -1,4 +1,3 @@
-import hashlib
 
 file_0 = input("Escolha o arquivo original de backup: ")
 file_1 = input("Escolha o arquivo para a comparação: ")
